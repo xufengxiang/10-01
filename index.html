@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a href="./play.html" id="lev">关卡：<span id="go">1</span></a>
+    <script>
+        var num = window.location.href.split('#')[1]-0;
+        if(num){
+		if(num==6){
+			num = 0;
+		}
+            document.getElementById('go').innerText=num+1;
+            document.getElementById('lev').setAttribute('href','./play.html#'+num);
+        };
+    </script>
+</body>
+</html>
